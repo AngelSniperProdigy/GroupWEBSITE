@@ -52,11 +52,11 @@
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
             <li><a href="/group_3/index.php">Home</a></li>
-            <li><a href="aboutus.html">AboutUs</a></li>
-            <li><a href="">OurService</a></li>
+            <li><a href="/group_3/aboutus.php">About Us</a></li>
+            <li><a href="">Our Services</a></li>
             <li><a href="/group_3/courses">Courses</a></li>
-            <li><a href="">LearningTool</a></li>
-            <li><a href="/group_3/Contact.html">ContactUs</a></li>
+            <li><a href="">Learning Tool</a></li>
+            <li><a href="/group_3/Contact.php">Contact Us</a></li>
         </ul>
     </div>
     <i class="fa fa-bars" onclick="showMenu()"></i>

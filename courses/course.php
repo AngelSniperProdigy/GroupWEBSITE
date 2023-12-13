@@ -1,43 +1,20 @@
 <?php
-$courses = [
-    [
-        'name' => 'Fiction Writing',
-        'description' => 'Explore the art of creative writing with an emphasis on fiction. Develop your narrative skills and learn to craft compelling stories.',
-        'date' => '2023-09-01',
-        'lecturer' => 'Dr. Jane Smith',
-        'id' => 101,
-        'modules' => [
-            'Introduction to Fiction',
-            'Character Development',
-            'Plot and Structure'
-        ]
-    ],
-    [
-        'name' => 'Non-Fiction Writing',
-        'description' => 'Dive into the world of non-fiction writing. Learn techniques for research, fact-checking, and presenting real-world topics in an engaging manner.',
-        'date' => '2023-10-15',
-        'lecturer' => 'Prof. Alex Johnson',
-        'id' => 102,
-        'modules' => [
-            'Basics of Non-Fiction',
-            'Research Methods',
-            'Writing and Editing Non-Fiction'
-        ]
-    ],
-    [
-        'name' => 'Poetry and Verse',
-        'description' => 'Immerse yourself in the beauty of poetry. Study various forms and styles, from traditional sonnets to contemporary free verse, and hone your poetic voice.',
-        'date' => '2023-11-05',
-        'lecturer' => 'Ms. Emily Clarke',
-        'id' => 103,
-        'modules' => [
-            'Poetry Fundamentals',
-            'Styles and Forms of Poetry',
-            'Contemporary Poetic Expression'
-        ]
-    ]
-];
+include "./data.php";
 
+$courseCompleted = isset($_GET['completed']) && ($_GET['completed'] == true);
+$selectedCourseName = ($_GET['course'] ?? '');
+$selectedCourse = null;
+
+foreach ($courses as $course) {
+    if ($course['name'] === $selectedCourseName) {
+        $selectedCourse = $course;
+        break; // Exit the loop once the course is found
+    }
+}
+
+if ($selectedCourse == null) {
+    die("Course not found.");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,11 +24,48 @@ $courses = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>courses</title>
     <link rel="stylesheet" href="../courses.css" />
+    <style>
+        .main {
+            margin: 2rem 6%;
+        }
+    </style>
 </head>
 
 <body>
     <?php include "../header.php"; ?>
 
+    <!-- List modules for course -->
+    <main class="main">
+
+        <h1>Modules for
+            <?php echo $selectedCourseName; ?>
+            <?php if ($courseCompleted): ?>
+                <small>( Course Completed )</small>
+            <?php endif ?>
+        </h1>
+        <p>
+            <?php echo $selectedCourse['description']; ?>
+        </p>
+        <ol>
+            <?php foreach ($selectedCourse['modules'] as $module): ?>
+                <li>
+                    <h4>
+                        <?php echo ($module['name']); ?>
+                    </h4>
+
+                    <p>
+                        <?php echo $module['description'] ?>
+                    </p>
+                    <?php if (!$courseCompleted): ?>
+                        <a
+                            href="/group_3/courses/lesson.php?course=<?php echo urlencode($selectedCourseName); ?>&module=<?php echo urlencode($module['name']); ?>&lesson=1">
+                            Attempt Module
+                        </a>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+    </main>
 </body>
 
 </html>

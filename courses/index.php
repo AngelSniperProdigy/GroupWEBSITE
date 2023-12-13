@@ -1,43 +1,5 @@
 <?php
-$courses = [
-    [
-        'name' => 'Fiction Writing',
-        'description' => 'Explore the art of creative writing with an emphasis on fiction. Develop your narrative skills and learn to craft compelling stories.',
-        'date' => '2023-09-01',
-        'lecturer' => 'Dr. Jane Smith',
-        'id' => 101,
-        'modules' => [
-            'Introduction to Fiction',
-            'Character Development',
-            'Plot and Structure'
-        ]
-    ],
-    [
-        'name' => 'Non-Fiction Writing',
-        'description' => 'Dive into the world of non-fiction writing. Learn techniques for research, fact-checking, and presenting real-world topics in an engaging manner.',
-        'date' => '2023-10-15',
-        'lecturer' => 'Prof. Alex Johnson',
-        'id' => 102,
-        'modules' => [
-            'Basics of Non-Fiction',
-            'Research Methods',
-            'Writing and Editing Non-Fiction'
-        ]
-    ],
-    [
-        'name' => 'Poetry and Verse',
-        'description' => 'Immerse yourself in the beauty of poetry. Study various forms and styles, from traditional sonnets to contemporary free verse, and hone your poetic voice.',
-        'date' => '2023-11-05',
-        'lecturer' => 'Ms. Emily Clarke',
-        'id' => 103,
-        'modules' => [
-            'Poetry Fundamentals',
-            'Styles and Forms of Poetry',
-            'Contemporary Poetic Expression'
-        ]
-    ]
-];
-
+include "./data.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,11 +57,12 @@ $courses = [
                         <ul class="modules">
                             <?php foreach ($course['modules'] as $module): ?>
                                 <li>
-                                    <?php echo $module; ?>
+                                    <?php echo $module['name']; ?>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
-                        <a class="navigate" href="/group_3/courses/course.php?course=<?php echo $course['id']; ?>">Start
+                        <a class="navigate"
+                            href="/group_3/courses/course.php?course=<?php echo urlencode($course['name']); ?>">Start
                             Course</a>
                     </div>
                 </div>
@@ -109,7 +72,6 @@ $courses = [
     </main>
     <script>
         window.onload = function () {
-            console.log("VIEW MORE");
             [...document.querySelectorAll('.view-more')].forEach((button) => {
                 button.addEventListener("click", function (e) {
                     const courseDetails = document.getElementById(button.dataset.course);
