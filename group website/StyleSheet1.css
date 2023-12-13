@@ -105,7 +105,7 @@ about-image{
     position:relative;
 }
 .nav-links ul li a{
-    color:#000;
+    color:#fff;
     text-decoration: none;
     font-size: 13px;
 }
@@ -137,7 +137,7 @@ about-image{
 .text-box p{
     margin: 10px 0 40px;
     font-size: 14px;
-    color: black;
+    color: #fff;
 }
 .hero-btn{
     display: inline-block;
