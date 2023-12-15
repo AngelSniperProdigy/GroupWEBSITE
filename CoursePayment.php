@@ -21,24 +21,7 @@ $selectedCourseName = ($_GET['course'] ?? '');
 
 <body>
     <section class="header">
-        <nav>
-            <div>
-                <img id="logo" width="90" src="LOGO.png" alt="ImagiNationInk logo">
-            </div>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">AboutUs</a></li>
-                    <li><a href="">OurService</a></li>
-                    <li><a href="">Assignments</a></li>
-                    <li><a href="">LearningTool</a></li>
-                    <li><a href="CoursePayment.html">CoursePayment</a></li>
-                    <li><a href="Contact.html">ContactUs</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+        <?php include "header.php" ?>
     </section>
 
     <section class="heading">
