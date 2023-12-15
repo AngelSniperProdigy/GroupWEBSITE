@@ -53,7 +53,7 @@
         <ul>
             <li><a href="/group_3/index.php">Home</a></li>
             <li><a href="/group_3/aboutus.php">About Us</a></li>
-            <li><a href="">Our Services</a></li>
+            <!-- <li><a href="">Our Services</a></li> -->
             <li><a href="/group_3/courses">Courses</a></li>
             <li><a href="">Learning Tool</a></li>
             <li><a href="/group_3/Contact.php">Contact Us</a></li>

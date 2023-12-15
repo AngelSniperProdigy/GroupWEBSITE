@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>ImangiNationInkAbout Us </title>
-    <link rel="stylesheet" href="StyleSheet1.css">
+    <title>ImangiNationInk - About Us </title>
+    <!-- <link rel="stylesheet" href="StyleSheet1.css"> -->
     <link rel="stylesheet" href="stylesheet5.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1&display=swap"
@@ -17,10 +16,9 @@
 </head>
 
 <body>
-    <section class="header">
+    <section class="">
         <?php include "./header.php"; ?>
         <section class="heading">
-
             <div>
                 <h1>About Us</h1>
                 <p>
@@ -30,7 +28,6 @@
             </div>
             <div class="container">
                 <section class="about">
-
                     <div class="about-image">
                         <img src="aboutUSimage.jpeg">
                     </div>
@@ -50,8 +47,7 @@
                     words at ImangiNationInk and let your creativity flow.
                     We have lecturers with decades of experience in creative writing who can teach certain techniques
                     which will be vital for your career. </p>
-                <a href="Meet%20The%20Team-About%20us.html" class="read-more">Read More</a>
-
+                <a href="Meet%20The%20Team-About%20us.php" class="read-more">Read More</a>
             </div>
         </section>
 

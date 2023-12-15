@@ -5,7 +5,7 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <title src="LOGO.png">ImangiNationInkHome</title>
+    <title src="LOGO.png">ImangiNationInk - Home</title>
     <link rel="stylesheet" href="StyleSheet1.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1&display=swap"
@@ -26,13 +26,13 @@
                 through interactive tools and resources, <br />fostering a
                 vibrant community of young storytellers.
             </p>
-            <a href="aboutus.html" class="hero-btn">Visit Us To Know More</a>
+            <a href="aboutus.php" class="hero-btn">Visit Us To Know More</a>
         </div>
     </section>
     <!------Course------>
 
     <section class="course">
-        <h1>Course We Offer</h1>
+        <h1>Courses We Offer</h1>
         <p>Creative Writing</p>
         <div class="row">
             <div class="course-col">
@@ -149,7 +149,7 @@
         <h1>What Our Student Say</h1>
         <p>Our student are our priority</p>
 
-        <div class="row">
+        <div class="row testimonials-row">
             <div class="testimonial-col">
                 <img src="student1.jpeg" />
                 <div>
@@ -221,7 +221,7 @@
 
     <section class="cta">
         <h1>Enroll For Our Online Classes</h1>
-        <a href="Contact.html" class="hero-btn">CONTACT US</a>
+        <a href="Contact.php" class="hero-btn">CONTACT US</a>
     </section>
 
     <!---Footer--->

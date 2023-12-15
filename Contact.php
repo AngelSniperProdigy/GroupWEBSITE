@@ -9,6 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="StyleSheet3.css">
+    <style>
+        .nav-links ul li a {
+            color: #fff !important;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        label {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>

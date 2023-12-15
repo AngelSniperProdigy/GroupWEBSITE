@@ -62,7 +62,7 @@ include "./data.php";
                             <?php endforeach; ?>
                         </ul>
                         <a class="navigate"
-                            href="/group_3/courses/course.php?course=<?php echo urlencode($course['name']); ?>">Start
+                            href="../CoursePayment.php?course=<?php echo urlencode($course['name']); ?>">Start
                             Course</a>
                     </div>
                 </div>

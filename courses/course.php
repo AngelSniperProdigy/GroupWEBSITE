@@ -24,9 +24,14 @@ if ($selectedCourse == null) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>courses</title>
     <link rel="stylesheet" href="../courses.css" />
+    <link rel="stylesheet" href="../button.css" />
     <style>
         .main {
             margin: 2rem 6%;
+        }
+
+        .done {
+            color: green;
         }
     </style>
 </head>
@@ -40,7 +45,7 @@ if ($selectedCourse == null) {
         <h1>Modules for
             <?php echo $selectedCourseName; ?>
             <?php if ($courseCompleted): ?>
-                <small>( Course Completed )</small>
+                <small class="done">( Course Completed )</small>
             <?php endif ?>
         </h1>
         <p>
@@ -57,7 +62,7 @@ if ($selectedCourse == null) {
                         <?php echo $module['description'] ?>
                     </p>
                     <?php if (!$courseCompleted): ?>
-                        <a
+                        <a class="btn hover-effect"
                             href="/group_3/courses/lesson.php?course=<?php echo urlencode($selectedCourseName); ?>&module=<?php echo urlencode($module['name']); ?>&lesson=1">
                             Attempt Module
                         </a>
